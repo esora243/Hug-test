@@ -870,6 +870,58 @@ section {
 }
 
 /* ====================================
+   追加した画像レイアウト用のスタイル
+   ==================================== */
+
+/* メッセージページのレイアウト */
+.message-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.message-profile-img {
+  flex: 0 0 280px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.message-content-area {
+  flex: 1;
+}
+
+.message-content-area .message-block {
+  margin-bottom: 24px;
+}
+
+.concept-image-wrapper {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.concept-image-wrapper img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* お問い合わせページのメール画像レイアウト */
+.email-image-wrapper {
+  text-align: center;
+  margin-top: 24px;
+  padding: 32px 16px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius);
+}
+
+.email-image-wrapper img {
+  max-height: 40px;
+  margin: 0 auto;
+}
+
+/* ====================================
    アニメーション
    ==================================== */
 .fade-in {
@@ -965,5 +1017,21 @@ section {
 
   .hero-buttons .btn {
     width: 100%;
+  }
+
+  /* --- 追加：画像レイアウトのスマホ対応 --- */
+  .message-wrapper {
+    flex-direction: column;
+  }
+
+  .message-profile-img {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 24px;
+  }
+
+  .email-image-wrapper img {
+    max-height: 28px;
   }
 }
