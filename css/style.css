@@ -10,20 +10,22 @@
 }
 
 :root {
-  --color-primary: #8b6f47;        /* ウォームブラウン */
-  --color-primary-dark: #6d5635;
-  --color-accent: #c9a87c;         /* ベージュゴールド */
-  --color-bg: #fdfaf5;             /* アイボリー */
-  --color-bg-alt: #f5ede0;         /* ベージュ */
-  --color-text: #3a342c;           /* ダークブラウン */
-  --color-text-light: #6b6258;
-  --color-border: #e8dcc7;
+  /* 白・水色・紺を基調としたカラーパレットに変更 */
+  --color-primary: #0f3057;        /* 紺色（メイン） */
+  --color-primary-dark: #081a30;   /* 深い紺色 */
+  --color-accent: #3282b8;         /* 水色（アクセント） */
+  --color-bg: #ffffff;             /* 白（ベース背景） */
+  --color-bg-alt: #f0f8ff;         /* ごく薄い水色（サブ背景・アリスブルー） */
+  --color-text: #2c3e50;           /* 濃いネイビーグレー（テキスト） */
+  --color-text-light: #5c6e80;     /* 薄いテキスト */
+  --color-border: #bbdefb;         /* 薄い水色ボーダー */
   --color-white: #ffffff;
-  --color-green: #7a9b6e;          /* サブカラー：医療グリーン */
-  --color-navy: #4a5c6a;           /* サブカラー：信頼ネイビー */
-  --shadow-sm: 0 2px 8px rgba(139, 111, 71, 0.08);
-  --shadow-md: 0 4px 16px rgba(139, 111, 71, 0.12);
-  --shadow-lg: 0 8px 32px rgba(139, 111, 71, 0.15);
+  
+  /* シャドウも青みに合わせて調整 */
+  --shadow-sm: 0 2px 8px rgba(15, 48, 87, 0.08);
+  --shadow-md: 0 4px 16px rgba(15, 48, 87, 0.12);
+  --shadow-lg: 0 8px 32px rgba(15, 48, 87, 0.15);
+  
   --radius: 8px;
   --transition: all 0.3s ease;
 }
@@ -203,7 +205,8 @@ img {
   right: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(201, 168, 124, 0.15) 0%, transparent 70%);
+  /* 水色のグラデーションに変更 */
+  background: radial-gradient(circle, rgba(50, 130, 184, 0.15) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -214,7 +217,8 @@ img {
   left: -150px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(122, 155, 110, 0.1) 0%, transparent 70%);
+  /* 紺色のグラデーションに変更 */
+  background: radial-gradient(circle, rgba(15, 48, 87, 0.1) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -247,7 +251,7 @@ img {
 }
 
 .hero-title .accent {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .hero-lead {
@@ -470,7 +474,7 @@ section {
    フッター
    ==================================== */
 .site-footer {
-  background: var(--color-text);
+  background: var(--color-primary-dark);
   color: rgba(255, 255, 255, 0.85);
   padding: 60px 24px 24px;
 }
@@ -777,7 +781,7 @@ section {
   outline: none;
   border-color: var(--color-primary);
   background: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+  box-shadow: 0 0 0 3px rgba(15, 48, 87, 0.1);
 }
 
 .form-group textarea {
@@ -1039,7 +1043,7 @@ section {
    LINEデモ画面セクション
    ==================================== */
 .line-demo-section {
-  background-color: var(--color-white); /* 白を基調 */
+  background-color: var(--color-white);
   padding: 80px 20px;
   text-align: center;
 }
@@ -1050,7 +1054,7 @@ section {
 }
 
 .line-demo-title {
-  color: #000080; /* 紺色 */
+  color: var(--color-primary);
   font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 16px;
   font-weight: 700;
@@ -1064,8 +1068,8 @@ section {
 
 /* スマホ風の枠組み設定 */
 .line-demo-mockup {
-  background-color: #e0f2fe; /* 水色 */
-  border: 4px solid #000080; /* 紺色のフレーム */
+  background-color: var(--color-bg-alt);
+  border: 4px solid var(--color-primary);
   border-radius: 30px;
   padding: 16px;
   max-width: 320px;
@@ -1083,7 +1087,7 @@ section {
   transform: translateX(-50%);
   width: 60px;
   height: 6px;
-  background-color: #000080;
+  background-color: var(--color-primary);
   border-radius: 10px;
 }
 
